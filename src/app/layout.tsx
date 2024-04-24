@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import StyledComponentsRegistry from './lib/registry'
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -13,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </body>
     </html>
   );
 }
